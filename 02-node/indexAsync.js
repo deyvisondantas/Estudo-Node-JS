@@ -5,6 +5,7 @@
 */
 // importamos um módulo interno do node.js
 
+const { mainModule } = require("process");
 const util = require("util")
 const obterEnderecoAssync = util.promisify(obterEndereco)
 
@@ -44,6 +45,12 @@ function obterEndereco(idUsuario, callback) {
   }, 2000);
 }
 
+// 1o passo: adicionar a palavra async -> automaticamente ela retornará uma Promise
+async function main(){
+
+}
+
+/*
 const usuarioPromise = obterUsuario()
 // para manipular o sucesso usando a função .then
 // para manipular erros, usando o .catch
@@ -107,4 +114,4 @@ usuarioPromise
             `);
         });
     });
-});*/
+});*/ 
